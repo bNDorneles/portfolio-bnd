@@ -41,8 +41,8 @@ export const en: Dictionary = {
     eyebrow: "About",
     title: "Who is Bernardo?",
     body: [
-      "From São Borja/RS. IT Technician graduated from Instituto Federal Farroupilha and Software Engineering student at UNIPAMPA — Alegrete campus.",
-      "In 2024 I served in the Brazilian Army in the IT sector, maintaining servers, computers, and networks. Since 2026 I’ve worked as a full-stack developer at eSaaS on ERP systems and enterprise software.",
+      "From São Borja/RS. IT Technician from Instituto Federal Farroupilha (2021–2023) and Software Engineering student at UNIPAMPA — Alegrete campus.",
+      "In 2024 I served in the Brazilian Army in the IT sector, maintaining servers, computers, and networks. In 2026 I worked as a full-stack developer at eSaaS on ERP systems and enterprise software.",
       "I build APIs, web applications, and AI solutions. This site grows with the career.",
     ],
   },
@@ -51,7 +51,7 @@ export const en: Dictionary = {
     title: "Evolution",
     years: [
       {
-        year: "Earlier",
+        year: "2021–2023",
         events: ["IT Technician — IF Farroupilha (São Borja)"],
       },
       {
@@ -78,7 +78,11 @@ export const en: Dictionary = {
       },
       {
         year: "2027",
-        events: ["…whatever comes next"],
+        events: [
+          "Go deeper into backend, architecture, and software engineering in practice",
+          "Keep building applied AI and real systems",
+          "New professional challenges and projects that matter",
+        ],
       },
     ],
   },
@@ -88,18 +92,14 @@ export const en: Dictionary = {
     role: "Full-stack developer",
     company: "eSaaS",
     summary:
-      "Since February 2026 in Alegrete/RS. I work on white-label ERP solutions and enterprise software — full-stack development, integrations, and production module maintenance.",
+      "Worked in 2026 in Alegrete/RS on white-label ERP solutions and enterprise software — full-stack development, integrations, and production bug fixes.",
     topics: [
       "ERP systems",
       "APIs",
       ".NET",
       "Angular",
       "Integrations",
-      "NF-e / NFC-e",
-      "Fiscal systems",
       "Bug investigation and fixes",
-      "Module migration",
-      "System maintenance",
     ],
     expand: "View full experience",
     collapse: "Collapse",

@@ -41,8 +41,8 @@ export const pt: Dictionary = {
     eyebrow: "About",
     title: "Quem é Bernardo?",
     body: [
-      "Natural de São Borja/RS. Formado Técnico em Informática pelo Instituto Federal Farroupilha e estudante de Engenharia de Software na UNIPAMPA — Campus Alegrete.",
-      "Em 2024 atuei no Exército Brasileiro no setor de informática, com manutenção de servidores, computadores e redes. Desde 2026 trabalho como desenvolvedor full stack na eSaaS, em sistemas ERP e software empresarial.",
+      "Natural de São Borja/RS. Técnico em Informática pelo Instituto Federal Farroupilha (2021–2023) e estudante de Engenharia de Software na UNIPAMPA — Campus Alegrete.",
+      "Em 2024 atuei no Exército Brasileiro no setor de informática, com manutenção de servidores, computadores e redes. Em 2026 trabalhei como desenvolvedor full stack na eSaaS, em sistemas ERP e software empresarial.",
       "Construo APIs, aplicações web e soluções envolvendo IA. Este site acompanha a carreira — e evolui junto com ela.",
     ],
   },
@@ -51,7 +51,7 @@ export const pt: Dictionary = {
     title: "Evolução",
     years: [
       {
-        year: "Antes",
+        year: "2021–2023",
         events: [
           "Técnico em Informática — IF Farroupilha (São Borja)",
         ],
@@ -80,7 +80,11 @@ export const pt: Dictionary = {
       },
       {
         year: "2027",
-        events: ["…o que vier a seguir"],
+        events: [
+          "Aprofundar backend, arquitetura e engenharia de software na prática",
+          "Seguir em IA aplicada e sistemas reais",
+          "Novos desafios profissionais e projetos que importam",
+        ],
       },
     ],
   },
@@ -90,18 +94,14 @@ export const pt: Dictionary = {
     role: "Desenvolvedor full stack",
     company: "eSaaS",
     summary:
-      "Desde fevereiro de 2026 em Alegrete/RS. Atuo em soluções ERP white-label e software empresarial — desenvolvimento full stack, integrações e manutenção de módulos em produção.",
+      "Atuação em 2026 em Alegrete/RS. Trabalhei em soluções ERP white-label e software empresarial — desenvolvimento full stack, integrações e correção de bugs em produção.",
     topics: [
       "Sistemas ERP",
       "APIs",
       ".NET",
       "Angular",
       "Integrações",
-      "NF-e / NFC-e",
-      "Sistemas fiscais",
       "Investigação e correção de bugs",
-      "Migração de módulos",
-      "Manutenção de sistemas",
     ],
     expand: "Ver experiência completa",
     collapse: "Recolher",
