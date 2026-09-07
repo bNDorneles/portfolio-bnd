@@ -28,6 +28,7 @@ export function Terminal() {
   const [history, setHistory] = useState<string[]>([]);
   const [histIndex, setHistIndex] = useState(-1);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const logRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const projectSlugs = dict.projects.items.map((p) => p.slug);
@@ -37,8 +38,11 @@ export function Terminal() {
     setLines(t.welcome.map((text) => ({ type: "output", text })));
   }, [t.welcome, locale]);
 
+  // Scroll only inside the terminal log — never the page (scrollIntoView was jumping to this section on load)
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    const log = logRef.current;
+    if (!log) return;
+    log.scrollTop = log.scrollHeight;
   }, [lines]);
 
   function pushOutput(texts: string[]) {
@@ -160,7 +164,10 @@ export function Terminal() {
               </span>
             </div>
 
-            <div className="max-h-[320px] overflow-y-auto p-4 font-mono text-sm">
+            <div
+              ref={logRef}
+              className="max-h-[320px] overflow-y-auto p-4 font-mono text-sm"
+            >
               {lines.map((line, i) => (
                 <div key={`${i}-${line.text}`} className="mb-1 break-words">
                   {line.type === "input" ? (
@@ -190,7 +197,7 @@ export function Terminal() {
                   spellCheck={false}
                 />
               </form>
-              <div ref={bottomRef} />
+              <div ref={bottomRef} aria-hidden />
             </div>
           </div>
         </Reveal>
