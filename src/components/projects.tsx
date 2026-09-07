@@ -112,6 +112,7 @@ export function Projects() {
               index={index}
               viewCase={dict.projects.viewCase}
               collaborativeLabel={dict.projects.collaborative}
+              demoLabel={dict.projectPage.demo}
             />
           ))}
         </div>
