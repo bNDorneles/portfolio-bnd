@@ -4,7 +4,7 @@ export const en: Dictionary = {
   meta: {
     title: "Bernardo Dorneles — Software Engineering",
     description:
-      "Software Engineering student building systems, APIs, web apps, and AI-powered solutions.",
+      "Software Engineering student and full-stack developer building systems, APIs, web apps, and AI-powered solutions.",
   },
   nav: {
     about: "About",
@@ -19,7 +19,7 @@ export const en: Dictionary = {
     lastNameBefore: "DORN",
     lastNameAccent: "E",
     lastNameAfter: "LES",
-    role: "Software Engineering Student",
+    role: "Software Engineering Student · Full Stack Developer",
     focus: "Backend · AI · Systems",
     ctaGithub: "GitHub",
     ctaLinkedin: "LinkedIn",
@@ -28,12 +28,12 @@ export const en: Dictionary = {
   bento: {
     featuredLabel: "Featured",
     featuredTitle: "Phishing LLM",
-    featuredMeta: "AI / Research · SBseg 2026",
+    featuredMeta: "Paper · SBseg 2026 · SBC",
     githubTitle: "GitHub",
     githubMeta: "10+ public repositories",
     pythonTitle: "Python",
     engineeringTitle: "Engineering",
-    engineeringMeta: "UNIPAMPA",
+    engineeringMeta: "UNIPAMPA Alegrete",
     buildingTitle: "Currently building…",
     buildingMeta: "Systems, APIs, and LLM experiments",
   },
@@ -41,9 +41,9 @@ export const en: Dictionary = {
     eyebrow: "About",
     title: "Who is Bernardo?",
     body: [
-      "Software Engineering student at UNIPAMPA building systems, APIs, web applications, and AI solutions.",
-      "The edge isn't a single stack — it's range: from academic foundations to enterprise systems, from data structures to LLM experiments.",
-      "This site grows with the career. Today: Software Engineering Student. Next: whatever practice shapes.",
+      "From São Borja/RS. IT Technician graduated from Instituto Federal Farroupilha and Software Engineering student at UNIPAMPA — Alegrete campus.",
+      "In 2024 I served in the Brazilian Army in the IT sector, maintaining servers, computers, and networks. Since 2026 I’ve worked as a full-stack developer at eSaaS on ERP systems and enterprise software.",
+      "I build APIs, web applications, and AI solutions. This site grows with the career.",
     ],
   },
   timeline: {
@@ -51,19 +51,28 @@ export const en: Dictionary = {
     title: "Evolution",
     years: [
       {
+        year: "Earlier",
+        events: ["IT Technician — IF Farroupilha (São Borja)"],
+      },
+      {
+        year: "2024",
+        events: [
+          "Brazilian Army — IT sector (servers, PCs, and networks)",
+        ],
+      },
+      {
         year: "2025",
         events: [
-          "Started Software Engineering at UNIPAMPA",
+          "Started Software Engineering at UNIPAMPA (Alegrete campus)",
           "First academic projects and fundamentals",
         ],
       },
       {
         year: "2026",
         events: [
-          "Building systems and APIs",
+          "Full-stack developer at eSaaS",
           "AI and LLM projects",
-          "Professional software experience",
-          "Phishing LLM — SBseg 2026",
+          "Paper published at SBseg 2026 (SBC)",
           "This portfolio",
         ],
       },
@@ -76,10 +85,10 @@ export const en: Dictionary = {
   experience: {
     eyebrow: "Experience",
     title: "Experience",
-    role: "Software Development",
+    role: "Full-stack developer",
     company: "eSaaS",
     summary:
-      "Work on real enterprise systems — ERP, fiscal integrations, and module maintenance in production.",
+      "Since February 2026 in Alegrete/RS. I work on white-label ERP solutions and enterprise software — full-stack development, integrations, and production module maintenance.",
     topics: [
       "ERP systems",
       "APIs",
@@ -106,27 +115,30 @@ export const en: Dictionary = {
       {
         slug: "phishing-llm",
         title: "Phishing LLM",
-        subtitle: "SBseg 2026",
-        tags: ["AI", "Python", "LLMs", "Research"],
+        subtitle: "SBseg 2026 · Published paper",
+        tags: ["AI", "Python", "LLMs", "Research", "Cybersecurity"],
         summary:
-          "A comparative methodology for evaluating LLMs on phishing detection.",
+          "LLMs for phishing email detection: a controlled comparison with TF-IDF baselines and auditable red flags — paper at SBseg 2026 (SBC).",
         featured: true,
         github: "https://github.com/bNDorneles/phishing-llm-sbseg2026",
+        article: {
+          url: "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/44508",
+        },
         caseStudy: {
           context:
-            "As language models spread, a natural question is how they behave on security tasks — especially identifying phishing messages.",
+            "Undergraduate research with Silvio Quincozes (UNIPAMPA), published in the Extended Proceedings of SBseg 2026. We evaluate LLMs for phishing email detection under a reproducible, security-oriented protocol.",
           problem:
-            "How do different language models behave when identifying phishing messages? A controlled, reproducible comparison across providers was missing.",
+            "A controlled comparison between recent LLMs and classic TF-IDF baselines on the same evaluation set was missing — with reproducibility and auditable justifications, not only raw metrics.",
           solution:
-            "A comparative methodology with a dataset, controlled experiments, and evaluation of multiple LLMs (OpenAI, Gemini, Groq, DeepSeek) under the same protocol.",
+            "A protocol with calibration (10 messages) and evaluation (90 messages), four LLMs under the same conditions, TF-IDF baselines without evaluation-set leakage, and analysis of red flags / structured justifications.",
           architecture:
-            "Python pipeline: dataset prep → standardized prompts → model API calls → response collection → metrics and comparative analysis.",
+            "Python experimental pipeline: dataset prep → standardized prompts → model calls → response collection → metrics (precision, recall, F1) → TF-IDF comparison and qualitative justification analysis.",
           technologies:
-            "Python · LLMs · OpenAI · Gemini · Groq · DeepSeek · APIs · data analysis",
+            "Python · LLMs (Qwen3 32B, Llama 3.3 70B and others) · TF-IDF · APIs · experimental analysis · cybersecurity",
           results:
-            "A performance comparison of models on phishing detection, with evidence to discuss LLM limits and opportunities in security.",
+            "Among LLMs, Qwen3 32B achieved the best performance and perfect phishing recall; Llama 3.3 70B had the most balanced profile. TF-IDF baselines reached higher raw F1 on this slice. The contribution is analyzing when LLMs add operational value via auditable red flags — not claiming overall superiority.",
           learned:
-            "Experimental protocol matters as much as the model. Standardizing prompts, controlling variables, and documenting failures turns an experiment into useful research.",
+            "Experimental protocol and baselines matter as much as the model. In security, explainability (red flags) can outweigh a point F1 without justification.",
         },
       },
       {
@@ -153,6 +165,30 @@ export const en: Dictionary = {
             "A usable product for a real group, with prediction flow and ranking — plus hands-on teamwork experience.",
           learned:
             "Collaboration forces clear ownership, PRs, and communication. Individual code only scales when the team is aligned.",
+        },
+      },
+      {
+        slug: "site-paroquia",
+        title: "Parish Website",
+        subtitle: "Institutional web presence",
+        tags: ["Web", "Frontend", "Institutional"],
+        summary:
+          "Institutional website for a parish — clear information, content structure, and a real delivery for the community.",
+        featured: true,
+        caseStudy: {
+          context:
+            "Digital presence project for a religious institution: the community needed a simple web channel for schedules, notices, and essential information.",
+          problem:
+            "Communicate masses, events, and pastoral content without relying only on social media or posters — with a stable, easy-to-update web base.",
+          solution:
+            "Institutional site focused on clarity: information pages, organized sections, and a responsive experience for mobile visitors.",
+          architecture:
+            "Static/institutional page structure with content hierarchy (home, schedules, notices, contact) and a layout built for fast reading.",
+          technologies: "HTML/CSS · JavaScript · responsive design · web publishing",
+          results:
+            "A usable official channel for the community — software serving a real context, not just a class exercise.",
+          learned:
+            "Institutional projects demand empathy with the audience and priority on content. Polish without useful information doesn’t solve the parish’s problem.",
         },
       },
       {
@@ -206,31 +242,6 @@ export const en: Dictionary = {
         },
       },
       {
-        slug: "estrutura-de-dados",
-        title: "Data Structures",
-        subtitle: "Java & algorithms",
-        tags: ["Java", "Algorithms", "Data Structures"],
-        summary:
-          "Implementations and study of data structures and algorithms in Java.",
-        featured: true,
-        github: "https://github.com/bNDorneles/Estrutura-de-dados",
-        caseStudy: {
-          context:
-            "Essential academic foundation: classic structures and the reasoning behind efficiency and data organization.",
-          problem:
-            "Master lists, queues, stacks, trees, and graphs in practice — not only in lecture theory.",
-          solution:
-            "Java implementations focused on understanding operations, complexity, and typical use of each structure.",
-          architecture:
-            "Modules per structure/algorithm, with usage examples and verification exercises.",
-          technologies: "Java · data structures · algorithms",
-          results:
-            "A foundation that shows up everywhere: domain modeling, performance, and design decisions.",
-          learned:
-            "The right structure changes the problem. Before optimizing code, ask whether the data structure is the right one.",
-        },
-      },
-      {
         slug: "conselho-tutelar",
         title: "Conselho Tutelar",
         subtitle: "Practical web system",
@@ -256,21 +267,7 @@ export const en: Dictionary = {
         },
       },
     ],
-    otherItems: [
-      {
-        name: "Networks",
-        blurb: "Computer networks projects and studies.",
-        github: "https://github.com/bNDorneles/Redes-gp06",
-      },
-      {
-        name: "NetChat",
-        blurb: "Network communication experiment.",
-      },
-      {
-        name: "Parish Website",
-        blurb: "Institutional site / web presence.",
-      },
-    ],
+    otherItems: [],
   },
   stack: {
     eyebrow: "Stack",
@@ -286,7 +283,7 @@ export const en: Dictionary = {
       },
       {
         label: "Frontend",
-        items: ["React", "Tailwind CSS"],
+        items: ["React", "Tailwind CSS", "Angular"],
       },
       {
         label: "Data",
@@ -370,13 +367,14 @@ export const en: Dictionary = {
     },
     github: "GitHub",
     demo: "Demo",
+    article: "Paper",
   },
   footer: {
     note: "Built to grow with the career.",
   },
   links: {
     github: "https://github.com/bNDorneles",
-    linkedin: "https://www.linkedin.com/in/bernardo-dorneles",
-    email: "mailto:bernardo.dorneles@example.com",
+    linkedin: "https://www.linkedin.com/in/bernardo-dorneles-6b6a9322a/",
+    email: "mailto:bernardogomesdorneles13@gmail.com",
   },
 };

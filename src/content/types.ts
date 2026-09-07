@@ -20,6 +20,7 @@ export interface Project {
   collaborative?: boolean;
   github?: string;
   demo?: string;
+  article?: { url: string; label?: string };
   caseStudy: ProjectCaseStudy;
 }
 
@@ -144,6 +145,7 @@ export interface Dictionary {
     };
     github: string;
     demo: string;
+    article: string;
   };
   footer: {
     note: string;

@@ -113,6 +113,17 @@ export function ProjectPage({ slug }: { slug: string }) {
                   {dict.projectPage.github}
                 </a>
               )}
+              {project.article && (
+                <a
+                  href={project.article.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm text-accent transition-colors hover:bg-accent hover:text-bg"
+                >
+                  <ExternalLink size={16} />
+                  {project.article.label ?? dict.projectPage.article}
+                </a>
+              )}
               {project.demo && (
                 <a
                   href={project.demo}

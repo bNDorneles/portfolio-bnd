@@ -91,33 +91,35 @@ export function Projects() {
           ))}
         </div>
 
-        <Reveal className="mt-16">
-          <h3 className="font-display text-xl font-semibold">
-            {dict.projects.others}
-          </h3>
-          <ul className="mt-6 divide-y divide-border border-y border-border">
-            {dict.projects.otherItems.map((item) => (
-              <li key={item.name}>
-                {item.github ? (
-                  <a
-                    href={item.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col gap-1 py-4 transition-colors hover:text-accent sm:flex-row sm:items-baseline sm:justify-between"
-                  >
-                    <span className="font-medium text-fg">{item.name}</span>
-                    <span className="text-sm text-muted">{item.blurb}</span>
-                  </a>
-                ) : (
-                  <div className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between">
-                    <span className="font-medium">{item.name}</span>
-                    <span className="text-sm text-muted">{item.blurb}</span>
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
-        </Reveal>
+        {dict.projects.otherItems.length > 0 && (
+          <Reveal className="mt-16">
+            <h3 className="font-display text-xl font-semibold">
+              {dict.projects.others}
+            </h3>
+            <ul className="mt-6 divide-y divide-border border-y border-border">
+              {dict.projects.otherItems.map((item) => (
+                <li key={item.name}>
+                  {item.github ? (
+                    <a
+                      href={item.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-col gap-1 py-4 transition-colors hover:text-accent sm:flex-row sm:items-baseline sm:justify-between"
+                    >
+                      <span className="font-medium text-fg">{item.name}</span>
+                      <span className="text-sm text-muted">{item.blurb}</span>
+                    </a>
+                  ) : (
+                    <div className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between">
+                      <span className="font-medium">{item.name}</span>
+                      <span className="text-sm text-muted">{item.blurb}</span>
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        )}
       </div>
     </section>
   );

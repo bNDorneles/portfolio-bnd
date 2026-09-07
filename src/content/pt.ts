@@ -4,7 +4,7 @@ export const pt: Dictionary = {
   meta: {
     title: "Bernardo Dorneles — Software Engineering",
     description:
-      "Estudante de Engenharia de Software que constrói sistemas, APIs, aplicações web e soluções com IA.",
+      "Estudante de Engenharia de Software e desenvolvedor full stack que constrói sistemas, APIs, aplicações web e soluções com IA.",
   },
   nav: {
     about: "Sobre",
@@ -19,7 +19,7 @@ export const pt: Dictionary = {
     lastNameBefore: "DORN",
     lastNameAccent: "E",
     lastNameAfter: "LES",
-    role: "Software Engineering Student",
+    role: "Software Engineering Student · Full Stack Developer",
     focus: "Backend · AI · Systems",
     ctaGithub: "GitHub",
     ctaLinkedin: "LinkedIn",
@@ -28,12 +28,12 @@ export const pt: Dictionary = {
   bento: {
     featuredLabel: "Destaque",
     featuredTitle: "Phishing LLM",
-    featuredMeta: "AI / Research · SBseg 2026",
+    featuredMeta: "Paper · SBseg 2026 · SBC",
     githubTitle: "GitHub",
     githubMeta: "10+ repositórios públicos",
     pythonTitle: "Python",
     engineeringTitle: "Engineering",
-    engineeringMeta: "UNIPAMPA",
+    engineeringMeta: "UNIPAMPA Alegrete",
     buildingTitle: "Currently building…",
     buildingMeta: "Sistemas, APIs e experimentos com LLMs",
   },
@@ -41,9 +41,9 @@ export const pt: Dictionary = {
     eyebrow: "About",
     title: "Quem é Bernardo?",
     body: [
-      "Estudante de Engenharia de Software na UNIPAMPA que constrói sistemas, APIs, aplicações web e soluções envolvendo IA.",
-      "O diferencial não é uma única stack — é a variedade: da base acadêmica a sistemas empresariais, de estruturas de dados a experimentos com LLMs.",
-      "Este site acompanha a carreira. Hoje: Software Engineering Student. Depois: o que a prática for moldando.",
+      "Natural de São Borja/RS. Formado Técnico em Informática pelo Instituto Federal Farroupilha e estudante de Engenharia de Software na UNIPAMPA — Campus Alegrete.",
+      "Em 2024 atuei no Exército Brasileiro no setor de informática, com manutenção de servidores, computadores e redes. Desde 2026 trabalho como desenvolvedor full stack na eSaaS, em sistemas ERP e software empresarial.",
+      "Construo APIs, aplicações web e soluções envolvendo IA. Este site acompanha a carreira — e evolui junto com ela.",
     ],
   },
   timeline: {
@@ -51,19 +51,30 @@ export const pt: Dictionary = {
     title: "Evolução",
     years: [
       {
+        year: "Antes",
+        events: [
+          "Técnico em Informática — IF Farroupilha (São Borja)",
+        ],
+      },
+      {
+        year: "2024",
+        events: [
+          "Exército Brasileiro — setor de informática (servidores, PCs e redes)",
+        ],
+      },
+      {
         year: "2025",
         events: [
-          "Início da Engenharia de Software na UNIPAMPA",
+          "Início da Engenharia de Software na UNIPAMPA (Campus Alegrete)",
           "Primeiros projetos acadêmicos e fundamentos",
         ],
       },
       {
         year: "2026",
         events: [
-          "Desenvolvimento de sistemas e APIs",
+          "Desenvolvedor full stack na eSaaS",
           "Projetos com IA e LLMs",
-          "Experiência profissional em software",
-          "Phishing LLM — SBseg 2026",
+          "Artigo publicado no SBSeg 2026 (SBC)",
           "Este portfólio",
         ],
       },
@@ -76,10 +87,10 @@ export const pt: Dictionary = {
   experience: {
     eyebrow: "Experience",
     title: "Experiência",
-    role: "Desenvolvimento de Software",
+    role: "Desenvolvedor full stack",
     company: "eSaaS",
     summary:
-      "Trabalho em sistemas empresariais reais — ERP, integrações fiscais e manutenção de módulos em produção.",
+      "Desde fevereiro de 2026 em Alegrete/RS. Atuo em soluções ERP white-label e software empresarial — desenvolvimento full stack, integrações e manutenção de módulos em produção.",
     topics: [
       "Sistemas ERP",
       "APIs",
@@ -106,27 +117,30 @@ export const pt: Dictionary = {
       {
         slug: "phishing-llm",
         title: "Phishing LLM",
-        subtitle: "SBseg 2026",
-        tags: ["AI", "Python", "LLMs", "Research"],
+        subtitle: "SBseg 2026 · Artigo publicado",
+        tags: ["AI", "Python", "LLMs", "Research", "Cybersecurity"],
         summary:
-          "Uma metodologia comparativa para avaliação de LLMs na detecção de phishing.",
+          "LLMs para detecção de phishing em e-mails: comparação controlada com baselines TF-IDF e red flags auditáveis — artigo no SBSeg 2026 (SBC).",
         featured: true,
         github: "https://github.com/bNDorneles/phishing-llm-sbseg2026",
+        article: {
+          url: "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/44508",
+        },
         caseStudy: {
           context:
-            "Com a popularização dos modelos de linguagem, surge a pergunta de como eles se comportam em tarefas de segurança — em especial na identificação de mensagens de phishing.",
+            "Trabalho de iniciação científica com Silvio Quincozes (UNIPAMPA), publicado nos Anais Estendidos do SBSeg 2026. Avaliamos LLMs na detecção de phishing em e-mails sob um protocolo reprodutível e orientado à cibersegurança.",
           problem:
-            "Como diferentes modelos de linguagem se comportam na identificação de mensagens de phishing? Faltava uma comparação controlada e reproduzível entre provedores.",
+            "Faltava uma comparação controlada entre LLMs recentes e baselines clássicas (TF-IDF) no mesmo conjunto avaliativo, com foco em reprodutibilidade e em justificativas auditáveis — não apenas em métricas brutas.",
           solution:
-            "Uma metodologia comparativa com dataset, experimentos controlados e avaliação de múltiplos LLMs (OpenAI, Gemini, Groq, DeepSeek) sob o mesmo protocolo.",
+            "Protocolo com calibração (10 mensagens) e avaliação (90 mensagens), quatro LLMs sob as mesmas condições, baselines TF-IDF sem vazamento do conjunto de teste, e análise de red flags / justificativas estruturadas.",
           architecture:
-            "Pipeline em Python: preparação do dataset → prompts padronizados → chamadas às APIs dos modelos → coleta de respostas → métricas e análise comparativa.",
+            "Pipeline experimental em Python: preparação do dataset → prompts padronizados → chamadas aos modelos → coleta de respostas → métricas (precisão, revocação, F1) → comparação com TF-IDF e análise qualitativa das justificativas.",
           technologies:
-            "Python · LLMs · OpenAI · Gemini · Groq · DeepSeek · APIs · análise de dados",
+            "Python · LLMs (Qwen3 32B, Llama 3.3 70B e outros) · TF-IDF · APIs · análise experimental · cibersegurança",
           results:
-            "Comparação do desempenho dos modelos na detecção de phishing, com evidências para discutir limites e oportunidades de LLMs em segurança.",
+            "Entre os LLMs, Qwen3 32B obteve o melhor desempenho e revocação perfeita para phishing; Llama 3.3 70B teve o perfil mais equilibrado. As baselines TF-IDF alcançaram maior F1-score bruto neste recorte. A contribuição é analisar quando LLMs agregam valor operacional via red flags auditáveis — não afirmar superioridade geral.",
           learned:
-            "Protocolo experimental importa tanto quanto o modelo. Padronizar prompts, controlar variáveis e documentar falhas é o que transforma um experimento em pesquisa útil.",
+            "Protocolo experimental e baselines importam tanto quanto o modelo. Em segurança, explicabilidade (red flags) pode valer mais do que um F1 pontual sem justificativa.",
         },
       },
       {
@@ -153,6 +167,30 @@ export const pt: Dictionary = {
             "Produto usável por um grupo real, com fluxo de palpites e ranking — e experiência prática de trabalho em equipe.",
           learned:
             "Colaboração força clareza de responsabilidades, PRs e comunicação. O código individual só escala quando o time alinhado.",
+        },
+      },
+      {
+        slug: "site-paroquia",
+        title: "Site da Paróquia",
+        subtitle: "Presença web institucional",
+        tags: ["Web", "Frontend", "Institucional"],
+        summary:
+          "Site institucional para uma paróquia — informação clara, organização de conteúdo e entrega real para a comunidade.",
+        featured: true,
+        caseStudy: {
+          context:
+            "Projeto de presença digital para uma instituição religiosa: a comunidade precisava de um canal web simples para horários, avisos e informações essenciais.",
+          problem:
+            "Comunicar missas, eventos e conteúdos pastorais sem depender só de redes sociais ou cartazes — com uma base web estável e fácil de atualizar.",
+          solution:
+            "Site institucional focado em clareza: páginas de informação, organização de seções e experiência responsiva para quem acessa pelo celular.",
+          architecture:
+            "Estrutura de páginas estáticas/institucionais com hierarquia de conteúdo (início, horários, avisos, contato) e layout pensado para leitura rápida.",
+          technologies: "HTML/CSS · JavaScript · design responsivo · publicação web",
+          results:
+            "Canal oficial utilizável pela comunidade — software a serviço de um contexto real, não apenas de um exercício de aula.",
+          learned:
+            "Projetos institucionais exigem empatia com o público e prioridade no conteúdo. Beleza sem informação útil não resolve o problema da paróquia.",
         },
       },
       {
@@ -206,31 +244,6 @@ export const pt: Dictionary = {
         },
       },
       {
-        slug: "estrutura-de-dados",
-        title: "Estrutura de Dados",
-        subtitle: "Java e algoritmos",
-        tags: ["Java", "Algorithms", "Data Structures"],
-        summary:
-          "Implementações e estudos de estruturas de dados e algoritmos em Java.",
-        featured: true,
-        github: "https://github.com/bNDorneles/Estrutura-de-dados",
-        caseStudy: {
-          context:
-            "Base acadêmica essencial: estruturas clássicas e o raciocínio por trás de eficiência e organização de dados.",
-          problem:
-            "Dominar listas, filas, pilhas, árvores e grafos na prática — não só na teoria da aula.",
-          solution:
-            "Implementações em Java com foco em compreensão das operações, complexidade e uso típico de cada estrutura.",
-          architecture:
-            "Módulos por estrutura/algoritmo, com exemplos de uso e exercícios de verificação.",
-          technologies: "Java · estruturas de dados · algoritmos",
-          results:
-            "Fundamento que aparece em tudo: modelagem de domínio, performance e decisões de design.",
-          learned:
-            "Estrutura certa muda o problema. Antes de otimizar código, vale perguntar se a estrutura de dados é a adequada.",
-        },
-      },
-      {
         slug: "conselho-tutelar",
         title: "Conselho Tutelar",
         subtitle: "Sistema web prático",
@@ -256,21 +269,7 @@ export const pt: Dictionary = {
         },
       },
     ],
-    otherItems: [
-      {
-        name: "Redes",
-        blurb: "Projetos e estudos de redes de computadores.",
-        github: "https://github.com/bNDorneles/Redes-gp06",
-      },
-      {
-        name: "NetChat",
-        blurb: "Experimento de comunicação em rede.",
-      },
-      {
-        name: "Site da Paróquia",
-        blurb: "Site institucional / presença web.",
-      },
-    ],
+    otherItems: [],
   },
   stack: {
     eyebrow: "Stack",
@@ -286,7 +285,7 @@ export const pt: Dictionary = {
       },
       {
         label: "Frontend",
-        items: ["React", "Tailwind CSS"],
+        items: ["React", "Tailwind CSS", "Angular"],
       },
       {
         label: "Data",
@@ -370,13 +369,14 @@ export const pt: Dictionary = {
     },
     github: "GitHub",
     demo: "Demo",
+    article: "Artigo",
   },
   footer: {
     note: "Construído para evoluir junto com a carreira.",
   },
   links: {
     github: "https://github.com/bNDorneles",
-    linkedin: "https://www.linkedin.com/in/bernardo-dorneles",
-    email: "mailto:bernardo.dorneles@example.com",
+    linkedin: "https://www.linkedin.com/in/bernardo-dorneles-6b6a9322a/",
+    email: "mailto:bernardogomesdorneles13@gmail.com",
   },
 };
