@@ -117,6 +117,15 @@ export interface Dictionary {
     hint: string;
     prompt: string;
     welcome: string[];
+    help: string[];
+    whoami: string;
+    about: string[];
+    cdUsage: string;
+    cdMissing: string;
+    cdOpening: string;
+    notFound: string;
+    ariaLabel: string;
+    inputLabel: string;
   };
   github: {
     eyebrow: string;

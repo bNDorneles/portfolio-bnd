@@ -13,6 +13,13 @@ import { useI18n } from "@/lib/i18n";
 
 type Line = { type: "input" | "output"; text: string };
 
+function fill(template: string, values: Record<string, string>) {
+  return Object.entries(values).reduce(
+    (text, [key, value]) => text.replaceAll(`{${key}}`, value),
+    template,
+  );
+}
+
 export function Terminal() {
   const { dict, locale } = useI18n();
   const router = useRouter();
@@ -24,10 +31,11 @@ export function Terminal() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const projectSlugs = dict.projects.items.map((p) => p.slug);
+  const t = dict.terminal;
 
   useEffect(() => {
-    setLines(dict.terminal.welcome.map((text) => ({ type: "output", text })));
-  }, [dict.terminal.welcome, locale]);
+    setLines(t.welcome.map((text) => ({ type: "output", text })));
+  }, [t.welcome, locale]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -53,39 +61,30 @@ export function Terminal() {
     const base = parts[0];
     const arg = parts[1];
 
-    if (base === "help") {
-      pushOutput([
-        "whoami          — identity",
-        "./about         — short profile",
-        "ls projects     — list projects",
-        "cd <slug>       — open project case study",
-        "clear           — clear screen",
-        "help            — this message",
-      ]);
+    if (base === "help" || base === "ajuda") {
+      pushOutput(t.help);
       return;
     }
 
-    if (base === "clear") {
+    if (base === "clear" || base === "limpar") {
       setLines([]);
       return;
     }
 
     if (base === "whoami") {
-      pushOutput(["bernardo@portfolio — Software Engineering Student"]);
+      pushOutput([t.whoami]);
       return;
     }
 
     if (base === "./about" || base === "about") {
-      pushOutput([
-        "> Software Engineering Student",
-        "> Backend Developer",
-        "> AI enthusiast",
-        "> Builder",
-      ]);
+      pushOutput(t.about);
       return;
     }
 
-    if (base === "ls" && (arg === "projects" || arg === undefined)) {
+    if (
+      (base === "ls" || base === "listar") &&
+      (arg === "projects" || arg === "projetos" || arg === undefined)
+    ) {
       pushOutput(projectSlugs.map((s) => `${s}/`));
       return;
     }
@@ -93,19 +92,19 @@ export function Terminal() {
     if (base === "cd") {
       const slug = arg?.replace(/\/$/, "");
       if (!slug) {
-        pushOutput(["usage: cd <project-slug>"]);
+        pushOutput([t.cdUsage]);
         return;
       }
       if (!projectSlugs.includes(slug)) {
-        pushOutput([`cd: no such project: ${slug}`]);
+        pushOutput([fill(t.cdMissing, { slug })]);
         return;
       }
-      pushOutput([`Opening ${slug}...`]);
+      pushOutput([fill(t.cdOpening, { slug })]);
       setTimeout(() => router.push(`/projects/${slug}`), 350);
       return;
     }
 
-    pushOutput([`command not found: ${cmd}. Type help.`]);
+    pushOutput([fill(t.notFound, { cmd })]);
   }
 
   function onSubmit(e: FormEvent) {
@@ -140,19 +139,17 @@ export function Terminal() {
     <section id="terminal" className="section-pad scroll-mt-20 py-20 md:py-28">
       <div className="container-max max-w-3xl">
         <Reveal>
-          <p className="eyebrow">{dict.terminal.eyebrow}</p>
+          <p className="eyebrow">{t.eyebrow}</p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
-            {dict.terminal.title}
+            {t.title}
           </h2>
-          <p className="mt-2 font-mono text-xs text-muted-dim">
-            {dict.terminal.hint}
-          </p>
+          <p className="mt-2 font-mono text-xs text-muted-dim">{t.hint}</p>
 
           <div
             className="mt-8 overflow-hidden border border-border bg-terminal"
             onClick={() => inputRef.current?.focus()}
             role="region"
-            aria-label="Interactive terminal"
+            aria-label={t.ariaLabel}
           >
             <div className="flex items-center gap-2 border-b border-border px-4 py-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f56]" />
@@ -168,7 +165,7 @@ export function Terminal() {
                 <div key={`${i}-${line.text}`} className="mb-1 break-words">
                   {line.type === "input" ? (
                     <p>
-                      <span className="text-accent">{dict.terminal.prompt}</span>{" "}
+                      <span className="text-accent">{t.prompt}</span>{" "}
                       <span className="text-fg">{line.text}</span>
                     </p>
                   ) : (
@@ -179,9 +176,9 @@ export function Terminal() {
 
               <form onSubmit={onSubmit} className="flex items-center gap-2">
                 <label htmlFor="terminal-input" className="sr-only">
-                  Terminal command
+                  {t.inputLabel}
                 </label>
-                <span className="shrink-0 text-accent">{dict.terminal.prompt}</span>
+                <span className="shrink-0 text-accent">{t.prompt}</span>
                 <input
                   id="terminal-input"
                   ref={inputRef}

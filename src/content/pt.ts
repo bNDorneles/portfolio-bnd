@@ -32,13 +32,13 @@ export const pt: Dictionary = {
     githubTitle: "GitHub",
     githubMeta: "10+ repositórios públicos",
     pythonTitle: "Python",
-    engineeringTitle: "Engineering",
+    engineeringTitle: "Engenharia",
     engineeringMeta: "UNIPAMPA Alegrete",
-    buildingTitle: "Currently building…",
+    buildingTitle: "Construindo agora…",
     buildingMeta: "Sistemas, APIs e experimentos com LLMs",
   },
   about: {
-    eyebrow: "About",
+    eyebrow: "Sobre",
     title: "Quem é Bernardo?",
     body: [
       "Natural de São Borja/RS. Técnico em Informática pelo Instituto Federal Farroupilha (2021–2023) e estudante de Engenharia de Software na UNIPAMPA — Campus Alegrete.",
@@ -47,7 +47,7 @@ export const pt: Dictionary = {
     ],
   },
   timeline: {
-    eyebrow: "Timeline",
+    eyebrow: "Linha do tempo",
     title: "Evolução",
     years: [
       {
@@ -89,8 +89,8 @@ export const pt: Dictionary = {
     ],
   },
   experience: {
-    eyebrow: "Experience",
-    title: "Experiência",
+    eyebrow: "Experiência",
+    title: "Trajetória",
     role: "Desenvolvedor full stack",
     company: "eSaaS",
     summary:
@@ -107,7 +107,7 @@ export const pt: Dictionary = {
     collapse: "Recolher",
   },
   projects: {
-    eyebrow: "Work",
+    eyebrow: "Trabalho",
     title: "Projetos",
     featured: "Destaques",
     others: "Outros projetos",
@@ -276,7 +276,7 @@ export const pt: Dictionary = {
     title: "Tecnologias",
     groups: [
       {
-        label: "Languages",
+        label: "Linguagens",
         items: ["Python", "Java", "C#", "JavaScript", "TypeScript"],
       },
       {
@@ -288,21 +288,21 @@ export const pt: Dictionary = {
         items: ["React", "Tailwind CSS", "Angular"],
       },
       {
-        label: "Data",
+        label: "Dados",
         items: ["PostgreSQL", "MongoDB", "SQLite"],
       },
       {
-        label: "Tools",
+        label: "Ferramentas",
         items: ["Git", "GitHub", "Docker"],
       },
       {
-        label: "AI",
+        label: "IA",
         items: ["LLMs", "OpenAI", "Gemini", "Groq", "DeepSeek"],
       },
     ],
   },
   howIWork: {
-    eyebrow: "Process",
+    eyebrow: "Processo",
     title: "Como eu trabalho",
     steps: [
       {
@@ -333,26 +333,47 @@ export const pt: Dictionary = {
     ],
   },
   terminal: {
-    eyebrow: "Playground",
+    eyebrow: "Experimente",
     title: "Terminal",
-    hint: "Tente: whoami · ./about · ls projects · cd phishing-llm",
+    hint: "Tente: whoami · ./about · ls projects · cd phishing-llm · ajuda",
     prompt: "bernardo@portfolio:~$",
     welcome: [
-      "Terminal do portfólio. Digite help para ver comandos.",
+      "Terminal do portfólio. Digite help (ou ajuda) para ver comandos.",
       "Este site evolui junto com a carreira.",
     ],
+    help: [
+      "whoami          — identidade",
+      "./about         — perfil curto",
+      "ls projects     — listar projetos",
+      "cd <slug>       — abrir case study do projeto",
+      "clear           — limpar tela",
+      "help / ajuda    — esta mensagem",
+    ],
+    whoami: "bernardo@portfolio — Estudante de Engenharia de Software",
+    about: [
+      "> Estudante de Engenharia de Software",
+      "> Desenvolvedor Backend",
+      "> Entusiasta de IA",
+      "> Builder",
+    ],
+    cdUsage: "uso: cd <slug-do-projeto>",
+    cdMissing: "cd: projeto não encontrado: {slug}",
+    cdOpening: "Abrindo {slug}...",
+    notFound: "comando não encontrado: {cmd}. Digite help ou ajuda.",
+    ariaLabel: "Terminal interativo",
+    inputLabel: "Comando do terminal",
   },
   github: {
     eyebrow: "GitHub",
     title: "Código em público",
-    body: "10+ repositórios públicos · Projects · Experiments · University",
+    body: "10+ repositórios públicos · Projetos · Experimentos · Universidade",
     cta: "Explorar meu GitHub",
   },
   contact: {
-    eyebrow: "Contact",
-    title: "Let's connect",
+    eyebrow: "Contato",
+    title: "Vamos conversar",
     body: "Tem um projeto interessante? Quer conversar sobre tecnologia?",
-    email: "Email",
+    email: "E-mail",
     linkedin: "LinkedIn",
     github: "GitHub",
   },
