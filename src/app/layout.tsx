@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   title: "Bernardo Dorneles — Software Engineering",
   description:
     "Software Engineering student building systems, APIs, web apps, and AI-powered solutions.",
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/apple-icon", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({
