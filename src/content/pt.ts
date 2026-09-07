@@ -172,23 +172,25 @@ export const pt: Dictionary = {
       {
         slug: "site-paroquia",
         title: "Site da Paróquia",
-        subtitle: "Presença web institucional",
-        tags: ["Web", "Frontend", "Institucional"],
+        subtitle: "Paróquia São Francisco de Borja",
+        tags: ["Next.js", "TypeScript", "Sanity", "Institucional"],
         summary:
-          "Site institucional para uma paróquia — informação clara, organização de conteúdo e entrega real para a comunidade.",
+          "Portal institucional da Paróquia São Francisco de Borja — informação clara, conteúdo organizado e entrega real para a comunidade.",
         featured: true,
+        github: "https://github.com/bNDorneles/site-paroquia",
+        demo: "https://site-paroquia-eta.vercel.app",
         caseStudy: {
           context:
-            "Projeto de presença digital para uma instituição religiosa: a comunidade precisava de um canal web simples para horários, avisos e informações essenciais.",
+            "Portal institucional da Paróquia São Francisco de Borja: a comunidade precisava de um canal web para horários, avisos e informações essenciais.",
           problem:
             "Comunicar missas, eventos e conteúdos pastorais sem depender só de redes sociais ou cartazes — com uma base web estável e fácil de atualizar.",
           solution:
-            "Site institucional focado em clareza: páginas de informação, organização de seções e experiência responsiva para quem acessa pelo celular.",
+            "Site institucional em Next.js com CMS (Sanity), páginas de informação, organização de seções e experiência responsiva para mobile.",
           architecture:
-            "Estrutura de páginas estáticas/institucionais com hierarquia de conteúdo (início, horários, avisos, contato) e layout pensado para leitura rápida.",
-          technologies: "HTML/CSS · JavaScript · design responsivo · publicação web",
+            "Next.js + TypeScript no front · Sanity como CMS · hierarquia de conteúdo (início, horários, avisos, contato) e deploy na Vercel.",
+          technologies: "Next.js · TypeScript · Sanity · Tailwind · Vercel",
           results:
-            "Canal oficial utilizável pela comunidade — software a serviço de um contexto real, não apenas de um exercício de aula.",
+            "Canal oficial no ar para a comunidade — software a serviço de um contexto real, não apenas de um exercício de aula.",
           learned:
             "Projetos institucionais exigem empatia com o público e prioridade no conteúdo. Beleza sem informação útil não resolve o problema da paróquia.",
         },
@@ -252,6 +254,7 @@ export const pt: Dictionary = {
           "Sistema web com aplicação prática — organização de fluxos e demandas reais.",
         featured: true,
         github: "https://github.com/bNDorneles/conselho-tutelar",
+        demo: "https://conselho-tutelar-six.vercel.app",
         caseStudy: {
           context:
             "Projeto de sistema web orientado a um contexto institucional: organização de informações e fluxos de atendimento.",
